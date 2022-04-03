@@ -1,12 +1,18 @@
 pipeline {
         agent any
         stages{
-            stage('run'){
+            stage('build'){
                 steps {
-                    echo "Genco's Way to Success"
-                    sh 'python --version'
+                    echo "Compling the java source code"
+                    sh 'javac Hello.java'
                     sh 'python pipeline.py'
 
+                }
+            }
+            stage('run'){
+                steps{
+                    echo "Running the compilied java code."
+                    sh "java Hello"
                 }
             }
         }
