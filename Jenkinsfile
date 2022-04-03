@@ -4,13 +4,12 @@ pipeline {
             stage('build'){
                 steps {
                     echo "Compling the java source code"
-                    sh 'javac Hello.java'
-                    sh 'python pipeline.py'
+                    sh 'javac Hello.java
 
                 }
             }
-            stage('run'){
-                steps{
+            stage('run') {
+                steps {
                     echo "Running the compilied java code."
                     sh "java Hello"
                 }
