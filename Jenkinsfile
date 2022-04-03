@@ -1,6 +1,6 @@
 pipeline {
         agent any
-        stages{
+        stages {
             stage('build'){
                 steps {
                     echo "Compling the java source code"
