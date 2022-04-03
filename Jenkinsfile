@@ -1,12 +1,13 @@
 pipeline {
-    agent any
-    stages{
-        stage('build'){
-            steps{
-                echo "Seconds,third.. ;Genco working on pipeline"
-                sh 'echo using shell within Jenkinsfile'
-                echo 'not using shell in the Jenkinsfile'
+        agent any
+        stages{
+            stage('run'){
+                steps {
+                    echo "Genco's Way to Success"
+                    sh 'python --version'
+                    sh 'python pipeline.py'
+
+                }
             }
         }
     }
- }
